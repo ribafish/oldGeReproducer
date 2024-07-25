@@ -11,7 +11,7 @@ plugins {
 }
 
 develocity {
-//    server.set("https://ge.solutions-team.gradle.com/")
+    server.set("https://ge.solutions-team.gradle.com/")
     buildScan {
         termsOfUseUrl.set("https://gradle.com/help/legal-terms-of-use")
         termsOfUseAgree.set("yes")
