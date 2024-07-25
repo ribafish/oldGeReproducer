@@ -6,7 +6,7 @@ pluginManagement {
 rootProject.name = "oldGeReproducer"
 
 plugins {
-    id("com.gradle.enterprise") version("3.10.3")
+    id("com.gradle.enterprise") version("3.17.6")
     id("com.gradle.common-custom-user-data-gradle-plugin") version "1.13"
 }
 
