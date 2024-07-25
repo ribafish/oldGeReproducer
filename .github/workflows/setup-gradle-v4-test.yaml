@@ -20,11 +20,6 @@ jobs:
         with:
           develocity-access-key: ${{ secrets.DV_SOLUTIONS_ACCESS_KEY }}
           cache-read-only: false
-          gradle-home-cache-excludes: |
-            caches/build-cache-1
-            caches/keyrings
-            caches/transforms-*
-            caches/*/transforms
       - name: Check Gradle User Home caches dir
         run: |
           if [[ -d ~/.gradle/caches ]]
