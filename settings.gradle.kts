@@ -6,21 +6,16 @@ pluginManagement {
 rootProject.name = "oldGeReproducer"
 
 plugins {
-    id("com.gradle.enterprise") version("3.17.6")
-    id("com.gradle.common-custom-user-data-gradle-plugin") version "1.13"
+    id("com.gradle.develocity") version("3.17.6")
+    id("com.gradle.common-custom-user-data-gradle-plugin") version "2.0.2"
 }
 
-gradleEnterprise {
-//    server = "https://ge.solutions-team.gradle.com/"
+develocity {
+//    server.set("https://ge.solutions-team.gradle.com/")
     buildScan {
-        termsOfServiceUrl = "https://gradle.com/terms-of-service"
-        termsOfServiceAgree = "yes"
+        termsOfUseUrl.set("https://gradle.com/help/legal-terms-of-use")
+        termsOfUseAgree.set("yes")
 
-        publishAlways()
-        isUploadInBackground = System.getenv("CI") == null
-
-        capture {
-            isTaskInputFiles = true
-        }
+        uploadInBackground.set(System.getenv("CI") == null)
     }
 }
